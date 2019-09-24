@@ -1,0 +1,60 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#title {
+    color: #895B1E;
+    border-bottom: solid;
+    border-color: #A5AE9E;
+    margin-left: 1em;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2em;
+    grid-gap: 1em;
+}
+
+#grid div {
+    background-color: #7E846B;
+    padding: 1em;
+}
+
+.codeSection {
+    min-height: 140px;
+}
+
+.sectionName {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+a .comment {
+    display: none;
+}
+
+a:hover .main {
+    display: none;
+}
+
+a:hover .comment {
+    display: inline;
+}
+
+.comment {
+    font-size: .8em;
+}
