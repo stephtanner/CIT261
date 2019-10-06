@@ -1,0 +1,70 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#title {
+    color: black;
+    border-bottom: solid;
+    border-color: #F4F3EF;
+    margin-left: 1em;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2em;
+    grid-gap: 1em;
+}
+
+#grid div {
+    background-color: #F4F3EF;
+    padding: 1em;
+}
+
+.codeSection {
+    min-height: 140px;
+}
+
+.sectionName {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+a .comment {
+    display: none;
+}
+
+a:hover .main {
+    display: none;
+}
+
+a:hover .comment {
+    display: inline;
+}
+
+.comment {
+    font-size: .8em;
+}
+#brainMeLink h2{
+    text-align: center;
+}
+#brainMeLink img{
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

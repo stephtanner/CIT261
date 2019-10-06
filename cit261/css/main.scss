@@ -1,0 +1,50 @@
+body {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(6, 100%);
+}
+
+section {
+    padding: 2em;
+    height: calc(100vh - 4em);
+    width: calc(100% - 4em);
+    color: black;
+    scroll-snap-align: start;
+
+    &:nth-of-type(1) {
+        background: whitesmoke;
+    }
+
+    &:nth-of-type(2) {
+        background: whitesmoke;
+    }
+
+    &:nth-of-type(3) {
+        background: whitesmoke;
+    }
+    &:nth-of-type(4) {
+        background: whitesmoke;
+    }
+    &:nth-of-type(5) {
+        background: whitesmoke;
+    }
+    &:nth-of-type(6) {
+        background: whitesmoke;
+    }
+    
+#javaSection{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#javaSection div{
+    padding: .8em;
+}
+.example{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 1em 1em;
+    font-family: monospace;
+    max-width: 32em;
+}
+}
