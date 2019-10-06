@@ -5,9 +5,9 @@ body {
 }
 
 #title {
-    color: #895B1E;
+    color: black;
     border-bottom: solid;
-    border-color: #A5AE9E;
+    border-color: #F4F3EF;
     margin-left: 1em;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 #grid div {
-    background-color: #7E846B;
+    background-color: #F4F3EF;
     padding: 1em;
 }
 
@@ -33,6 +33,7 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 a:visited {
@@ -40,7 +41,7 @@ a:visited {
 }
 
 a:hover {
-    color: white;
+    color: gray;
 }
 
 a .comment {
@@ -57,4 +58,13 @@ a:hover .comment {
 
 .comment {
     font-size: .8em;
+}
+#brainMeLink h2{
+    text-align: center;
+}
+#brainMeLink img{
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

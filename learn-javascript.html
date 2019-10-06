@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Javascript Page for Learning and Explanations">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stephanie Tanner</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -16,31 +17,76 @@
     <section>
         <h1>Javascript: Basic Definition and Uses</h1>
         <p>Javascript is used to make a web page more interactive.</p>
-        <div>
-            <h2>Access Content</h2>
-            <p>Select any element, attribute, or text from an HTML page</p>
+        <div id="javaSection">
+            <div class="javaBasics">
+                <h2>Access Content</h2>
+                <p>Select any element, attribute, or text from an HTML page</p>
+            </div>
+            <div class="javaBasics">
+                <h2>Modify Content</h2>
+                <p>Add elements, attributes, and text to the page, or remove them</p>
+            </div>
+            <div class="javaBasics">
+                <h2>Program Rules</h2>
+                <p>a recipe for the computer to change things on the page</p>
+                <p>e.g. a gallery that enlarges and image when you click on it</p>
+            </div class="javaBasics">
+            <div>
+                <h2>React to Events</h2>
+                <p>have a script run... on click, on hover, after 10 seconds, on scroll, etc.</p>
+            </div>
         </div>
-        <div>
-            <h2>Modify Content</h2>
-            <p>Add elements, attributes, and text to the page, or remove them</p>
-        </div>
-        <div>
-            <h2>Program Rules</h2>
-            <p>a recipe for the computer to change things on the page</p>
-            <p>e.g. a gallery that enlarges and image when you click on it</p>
-        </div>
-        <div>
-            <h2>React to Events</h2>
-            <p>have a script run... on click, on hover, after 10 seconds, on scroll, etc.</p>
-        </div>
-    </section>
-    <section>
-        <h1>Javascript Functions</h1>
-        <p>A group of statements to perform a specific task. You can reuse a function rather than repeat the code.</p>
     </section>
     <section>
         <h1>Javascript Variables</h1>
         <p>containers for storing data values</p>
+        <p>declare using var keyword</p>
+        <p>All variables must have unique names within their scope:</p>
+        <ul>
+            <li>In a function, variables are local, meaning they are only inside the function</li>
+            <li>Global Variables are created outside a function (and take up more memory)</li>
+        </ul>
+        <div class="example">
+        <p>var x = 9;</p>
+        <p>var y = 7;</p>
+        <p>var z = x + y;</p>
+        <p>document.getElementById("practice").innerHTML = z;</p>
+        <p> display answer: 16</p>
+    </div>
+    </section>
+    <section>
+        <h1>Javascript Functions</h1>
+        <p>A group of statements to perform a specific task.
+            You can reuse a function rather than repeat the code.</p>
+        <p>Declaring a function: function functionName() {...</p>
+        <p>Calling a function: functionName();</p>
+    </section>
+    <section>
+        <h1>Javascript Arrays</h1>
+    
+            <p>A special type of variable that stores a list of values</p>
+            <div id="javaSection">
+                    <div>
+            <p>You should use an array whenever you are
+                working with a list or a set of values that are related</p>
+            <p>You do not need to specify how many items an array will hold</p>
+        </div>
+        <div>
+            <h2>Example</h2>
+            <p>var colors;<br>
+                colors = ["white", "yellow", "orange"];</p>
+        </div>
+        </div>
+    </section>
+    <section>
+        <h1>Conditional Statements</h1>
+        <p>containers for storing data values</p>
+        <p>declare using var keyword</p>
+    </section>
+    <section>
+        <h1>Loops</h1>
+        <p>containers for storing data values</p>
+        <p>declare using var keyword</p>
     </section>
 </body>
 
