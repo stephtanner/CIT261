@@ -1,92 +1,53 @@
-var submit = document.getElementById("submitButton");
-submit.onclick = function(){
-    var surgeryType = document.getElementById("surgeryType").value;
-    var surgeryDate = document.getElementById("surgeryDate").value;
-    alert(surgeryDate);
-    //var time = document.getElementById("").value;
-    document.getElementById("surgeryList").innerHTML = (surgeryType);
+var form = document.getElementById("surgeryForm");
+var localStorageArray = [];
+
+if(localStorage != null){
+    //get the array from the local storage with all the list items
+    var text = localStorage.getItem("surgeryStorage");
+    //parse the array into JSON objects
+    var objects = JSON.parse(text);
+    for(var i = 0; i < objects.length; i++){
+    var surgeryType = objects[i].surgeryType;
+    var surgeryDate = objects[i].surgeryDate;
+    var surgeryTime = objects[i].surgeryTime;
+    //re-list the items in the Surgery Schedule from the Local Storage
+    var listItem = document.getElementById("surgeryList").innerHTML += "<li>" + surgeryType + " | " +
+            surgeryDate + " | " + surgeryTime + '<span class="delete">delete</span></li>';
+    //Send the information from the last local storage to the new session's local storage
+    var myObject = {"surgeryType": surgeryType, "surgeryDate": surgeryDate, "surgeryTime": surgeryTime};
+    localStorageArray.push(myObject);
+    } 
 }
 
-/*const isValidElement = element => {
-    return element.name && element.value;
-  };
+form.onsubmit = function (event) {
+    //prevent the default function of a submit button
+    event.preventDefault();
+    //get the values for the three inputs in the form
+    //and set them to variables to use later
+    var surgeryType = form.surgeryType.value;
+    var surgeryDate = form.surgeryDate.value;
+    var surgeryTime = form.surgeryTime.value;
+    //create a new item that we add to the surgeryList divide
+    //we are also creating a new class and a new span to create a delete button
+    document.getElementById("surgeryList").innerHTML += "<li>" + surgeryType + " | " +
+        surgeryDate + " | " + surgeryTime + '<span class="delete">delete</span></li>';
+    //since we prevented the default, we have to clear the form each time they submit
+    form.reset();
 
-const formToJSON = elements => [].reduce.call(elements, (data, element) =>{
-    if(isValidElement(element)){
-        data[element.name] = element.value;
-    }
-    return data;
-}, {});
-
-const reducerFunction = (data, element) => {
-    data[element.name] = element.value;
-    console.log(JSON.stringify(data));
-    return data;
+    var myObject = {"surgeryType": surgeryType, "surgeryDate": surgeryDate, "surgeryTime": surgeryTime};
+    localStorageArray.push(myObject);
+    var myJSON = JSON.stringify(localStorageArray);
+    console.log(myJSON);
+    localStorage.setItem("surgeryStorage", myJSON);
 };
 
-function handleFormSubmit(event) {
-    event.preventDefault;
-    var data = formToJSON(form.elements);
-    var dataContainer = document.getElementsByClassName("surgeryList")[0];
-    dataContainer.textContent = JSON.stringify(data, null, " ");
-};
-
- var form = document.getElementsByClassName('contact-form')[0];
- form.addEventListener('submit', handleFormSubmit(form));
-                       
-*/
-
-
-
-
-
-
- /*var button = document.getElementById("submitButton");
- button.addEventListener("click", captureData());
-
- function captureData(){
-     var type = document.getElementById("typeSelected");
-     var date = document.getElementById("dateSelected");
-     var time = document.getElementsByClassName("time");
-     
-     console.log(time, date, type);
- }*/
-
-
-
-
-
-
-
- /*var button = document.getElementById("submitButton");
- button.addEventListener("click", function(event){
-     event.preventDefault;
-     sayHello();
- });
-
-
- each elemebyid () add it to an Object
- storage variable object:
- name: variable id 
-
-
-
-
-
- function message(){
-     alert("Hello");
- }
- function sayHello(){
-     document.getElementById("surgeryList").innerHTML = "hello!";
- }
-
-
-
- //document.getElementById("submitButton").addEventListener("click", sayHello());
-
- function theStuff(){
-     //var data = {};
-     //var dataContainer = document.getElementById("surgeryList").innerHTML = data;
-     //dataContainer.textContent = JSON.stringify(data, null, " ");
-     message();
- }*/
+//for each delete button created above, target the parent element and delete the list
+//This is only deleting it if I refresh the page!
+//I also need this to delete things from the local storage at the same time
+var buttons = document.querySelectorAll("li .delete");
+Array.from(buttons).forEach(function(button){
+button.addEventListener("click", function(event){
+    const li = event.target.parentElement;
+    li.parentNode.removeChild(li);
+});
+});

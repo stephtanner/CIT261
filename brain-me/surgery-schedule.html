@@ -15,17 +15,18 @@
 <body>
     <h2>Your Surgery Schedule</h2>
     <div class="content">
-        <form>
-                <div class="inline">
-                        <img src="images/icons/plus.png" class="start" id="myImage" onclick="rotateImage();" alt="plus">
-                        <h3>ADD SURGERY</h3>
-                    </div>
+        <div class="inline">
+            <img src="images/icons/plus.png" class="start" id="myImage" onclick="rotateImage();" alt="plus">
+            <h3>ADD SURGERY</h3>
+        </div>
+        <form id="surgeryForm" class="hide">
             <label for="surgeryType">Type of Surgery:</label>
-            <input type="text" name="surgeryType" class="block contact-form" id="surgeryType">
+            <input type="text" name="surgeryType" class="block contact-form" id="surgeryType" required>
             <label for="surgeryDate">Surgery Date:</label>
-            <input type="date" id="start" name="surgeryDate" min="2019-09-30" class="block" id="surgeryDate" class="contact-form"> 
+            <input type="date" id="start" name="surgeryDate" min="2019-09-30" class="block" id="surgeryDate"
+                class="contact-form" required>
             <label for="surgeryTime">Surgery Time:</label>
-            <div class="blockNoLine">
+            <div class="blockNoLine twoColumns">
                 <div>
                     <input type="radio" name="surgeryTime" value="7:00AM" class="time contact-form">
                     <label for="7:00AM">7:00AM</label>
@@ -67,11 +68,11 @@
                     <label for="4:00PM">4:00PM</label>
                 </div>
             </div>
-            <button type="button" id="submitButton">Add Surgery</button>
+            <button type="submit" id="submitButton">Add Surgery</button>
         </form>
     </div>
-    <h3>upcoming surgeries</h3>
-    <p id="surgeryList"></p>
+    <h2>Upcoming Surgeries</h2>
+    <ul id="surgeryList"></ul>
     <footer>
         <script type="text/javascript" src="scripts/add-surgeries.js"></script>
         <script type="text/javascript" src="scripts/animateForm.js"></script>
