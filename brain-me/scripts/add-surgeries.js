@@ -24,16 +24,6 @@ form.onsubmit = function (event) {
     console.log(localStorageArray);
 };
 
-//for each delete button created above, target the parent element and delete the list
-//This is only deleting it if I refresh the page!
-//I also need this to delete things from the local storage at the same time
-var buttons = document.querySelectorAll("li .delete");
-Array.from(buttons).forEach(function (button) {
-    button.addEventListener("click", function (event) {
-        const li = event.target.parentElement;
-        li.parentNode.removeChild(li);
-    });
-});
 
 
 if (localStorage != null) {
@@ -53,3 +43,14 @@ if (localStorage != null) {
         localStorageArray.push(myObject);
     }
 }
+
+//for each delete button created above, target the parent element and delete the list
+//This is only deleting it if I refresh the page!
+//I also need this to delete things from the local storage at the same time
+var buttons = document.querySelectorAll(".delete");
+Array.from(buttons).forEach(function(button){
+    button.addEventListener("click", function (event) {
+        const li = event.target.parentElement;
+        li.parentNode.removeChild(li);
+    });
+});
