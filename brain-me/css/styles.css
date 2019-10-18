@@ -1,41 +1,59 @@
+/*Rules for the entire site*/
 body {
     font-family: barlow;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
-
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     text-align: center;
 }
-
+/*Syle the navigation bar on the bottom of the screen*/
+.navbar{
+    background-color: whitesmoke;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+.navbar a{
+    color: black;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none; 
+}
+.navbar img{
+    height: 30px;
+    width: auto;
+    margin-bottom: -1em;
+}
+.navbar p{
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    transform: scale(1.1);
+    color: black;
+}
+.navbar a .active{
+    background-color: gray;
+    color: white;
+}
+/*Style the logo on top of the pages*/
 #logo {
     width: 75px;
     height: auto;
 }
-
-.menuIcon {
-    position: absolute;
-}
-
-.menuIcon div {
-    width: 30px;
-    height: 4px;
-    background-color: dimgray;
-    margin: 6px 0;
-}
-
+/*This is the start of Surgery Schedule Page*/
 #myImage {
     height: 60px;
     width: auto;
 }
-
 #myImage :hover{
     cursor: pointer;
 }
-
 .element {
     transform: rotate(90deg);
 }
@@ -46,7 +64,7 @@ h3 {
     align-items: center;
 }
 
-/*form*/
+/*form on the Surgery Schedule Page*/
 #riskButton{
     margin-top: 2em;
 }
@@ -172,6 +190,12 @@ h3 {
     cursor: pointer;
 
 }
+/*question marks on preSurgery*/
+fieldset img{
+    height: 16px;
+    width: auto;
+    margin-left: .5em;
+}
 
 /*front Page with option of login or signup*/
 #appStart #logo{
@@ -233,3 +257,44 @@ li{
 .hide{
     display: none;
 }
+/*The index page with the squares to click to the multiple pages*/
+#indexPage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: whitesmoke;
+}
+#indexPage section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 1.5em;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#indexPage section:hover{
+    transform: scale(1.1);
+}
+#indexPage section img{
+    display: block;
+    height: 100px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -1.2em;
+    padding-top: 1em;
+}
+#indexPage h2{
+    margin: 1em;
+}
+#indexPage a{
+    text-decoration: none;
+    color: black;
+}
+#indexPage a:visited{
+    color: black;
+}
+

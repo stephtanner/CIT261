@@ -16,7 +16,7 @@
     <h2>Your Surgery Schedule</h2>
     <div class="content">
         <div class="inline">
-            <img src="images/icons/plus.png" class="start" id="myImage" onclick="rotateImage();" alt="plus">
+            <img src="images/icons/plus.png" class="start" onclick="rotateImage();" id="myImage"  alt="plus">
             <h3>ADD SURGERY</h3>
         </div>
         <form id="surgeryForm" class="hide">
@@ -74,6 +74,24 @@
     <h2>Upcoming Surgeries</h2>
     <ul id="surgeryList"></ul>
     <footer>
+        <div class="navbar">
+            <a href="index.html" class="active">
+                <img src="images/brain-me-logo-300.png">
+                <p>Home</p>
+            </a>
+            <a href="surgery-schedule.html">
+                <img src="images/icons/schedule.png">
+                <p>Schedule</p>
+            </a>
+            <a href="preSurgery.html">
+                <img src="images/icons/folder.png">
+                <p>Risk</p>
+            </a>
+            <a href="postSurgery.html">
+                <img src="images/icons/analyze.png">
+                <p>Analysis</p>
+            </a>
+        </div>
         <script type="text/javascript" src="scripts/add-surgeries.js"></script>
         <script type="text/javascript" src="scripts/animateForm.js"></script>
     </footer>
