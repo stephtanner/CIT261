@@ -51,17 +51,26 @@ h1,h2,h3 {
     height: 60px;
     width: auto;
 }
-#myImage :hover{
-    cursor: pointer;
-}
 .element {
     transform: rotate(90deg);
 }
-
+.rotateSection:hover{
+    color: gray;
+    transform: scale(1.2);
+    transition-duration: 1s;
+    cursor: pointer;
+}
 .inline {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#surgeryList li{
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
 }
 
 /*form on the Surgery Schedule Page*/
@@ -143,6 +152,38 @@ h1,h2,h3 {
 .slideContainer {
     width: 100%;
 }
+label span p{
+    display: none;
+}
+label span:hover p{
+    display: inline;
+    position: absolute;
+    font-size: .6em;
+    background-color:#808080;
+    color: #f5f5f5;
+    max-width: 200px;
+    padding: .5em;
+    z-index: 1;
+}
+/*Canvas on the Risk Page*/
+.canvasContainer{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2em;
+    height: 300px;
+    width: 300px;
+}
+
+#riskScore{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 4em;
+    transform: translate(-50%, -50%);
+    color: #3CCED1;
+}
 
 /* The slider itself */
 .slider {
@@ -154,13 +195,9 @@ h1,h2,h3 {
     height: 15px;
     border-radius: 5px;
     background: #d3d3d3;
-    /* Grey background */
     outline: none;
-    /* Remove outline */
     opacity: 0.7;
-    /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s;
-    /* 0.2 seconds transition on hover */
     transition: opacity .2s;
 }
 
@@ -170,7 +207,7 @@ h1,h2,h3 {
 
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+/* The slider handle*/
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -277,6 +314,7 @@ li{
 }
 #indexPage section:hover{
     transform: scale(1.1);
+    transition-duration: .5s;
 }
 #indexPage section img{
     display: block;

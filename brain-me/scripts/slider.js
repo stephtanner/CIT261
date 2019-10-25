@@ -1,17 +1,7 @@
-/*var slider = document.getElementById("curencySlider");
-var output = document.getElementById("output");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}*/
 var output = document.getElementsByClassName("output");
 var outputArray = Array.from(output);
 var sliders = document.getElementsByClassName("slider");
 var slidersArray = Array.from(sliders);
-console.log(slidersArray);
-console.log(outputArray);
 
 for(var i = 0; i < slidersArray.length; i++){
     outputArray[i].innerHTML = slidersArray[i].value;

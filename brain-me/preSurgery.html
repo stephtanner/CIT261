@@ -27,25 +27,41 @@
                     <h2>Surgeon Factors</h2>
                     <div class="slideContainer">
                         <label>Curency
-                            <span class="help-tip">
+                            <span>
                                 <img src="images/icons/question.png">
+                                <p>Have you performed this surgery recently?</p>
                             </span>
                         </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
                     <div class="slideContainer">
-                        <label>Experience Level<span><img src="images/icons/question.png"></span></label>
+                        <label>Experience Level
+                            <span>
+                                <img src="images/icons/question.png">
+                                <p>How well do you know this surgery?</p>
+                            </span>
+                        </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
                     <div class="slideContainer">
-                        <label>Sleep Aquired<span><img src="images/icons/question.png"></span></label>
+                        <label>Sleep Aquired
+                            <span>
+                                <img src="images/icons/question.png">
+                                <p>Did you get 7-8 hours of sleep last night?</p>
+                            </span>
+                        </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
                     <div class="slideContainer">
-                        <label>Personal Factors<span><img src="images/icons/question.png"></span></label>
+                        <label>Personal Factors
+                            <span>
+                                <img src="images/icons/question.png">
+                                <p>Did you get hit by a car this morning?</p>
+                            </span>
+                        </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
@@ -53,31 +69,54 @@
                 <fieldset>
                     <h2>Operation Factors</h2>
                     <div class="slideContainer">
-                        <label>Procedure Complexity<span><img src="images/icons/question.png"></span></label>
+                        <label>Procedure Complexity
+                            <span>
+                                <img src="images/icons/question.png">
+                                <p>Is this procedure relatively complicated or routine?</p>
+                            </span>
+                        </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
                     <div class="slideContainer">
-                        <label>Procedure Length<span><img src="images/icons/question.png"></span></label>
+                        <label>Procedure Length
+                            <span>
+                                <img src="images/icons/question.png">
+                                <p>Is this a long procedure?</p>
+                            </span>
+                        </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
                     <div class="slideContainer">
-                        <label>Back-to-Back Operations<span><img src="images/icons/question.png"></span></label>
+                        <label>Back-to-Back Operations
+                            <span>
+                                <img src="images/icons/question.png">
+                                <p>Did you already have a surgery today? Do you have more?</p>
+                            </span>
+                        </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
                     <div class="slideContainer">
-                        <label>Patient Health Factors<span><img src="images/icons/question.png"></span></label>
+                        <label>Patient Health Factors
+                            <span>
+                                <img src="images/icons/question.png">
+                                <p>Is the patient extremely young, old, unhealthy, etc.?</p>
+                            </span>
+                        </label>
                         <input type="range" min="0" max="5" value="0" class="slider">
                         <div class="output"></div>
                     </div>
                 </fieldset>
-
                 <button type="submit" id="riskButton">Compute Risk</button>
-
             </form>
         </div>
+        <div class="canvasContainer">
+            <canvas id="riskScoreCanvas" width="300px" height="300px"></canvas>
+            <span id="riskScore"></span>
+        </div>
+        
 
     </main>
     <footer>
@@ -100,6 +139,7 @@
             </a>
         </div>
         <script type="text/javascript" src="scripts/slider.js"></script>
+        <script type="text/javascript" src="scripts/circle-risk.js"></script>
     </footer>
 </body>
 
