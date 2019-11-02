@@ -53,6 +53,11 @@ h1,h2,h3 {
 }
 .element {
     transform: rotate(90deg);
+    transition-duration: 1s;
+}
+.start{
+    transform: rotate(-90deg);
+    transition-duration: 1s;
 }
 .rotateSection:hover{
     color: gray;
@@ -241,6 +246,14 @@ fieldset img{
     background-color: #F4F3EF;
     border-radius: 50%;
     margin-top: 5em;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+}
+@keyframes pulse{
+    0% {background-color: #F4F3EF;}
+    15% {background-color: rgb(187, 187, 187);}
+    100% {background-color: #F4F3EF;}
 }
 #appStart a{
     display: block;
@@ -335,4 +348,3 @@ li{
 #indexPage a:visited{
     color: black;
 }
-

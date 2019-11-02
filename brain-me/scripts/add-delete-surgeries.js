@@ -13,6 +13,7 @@ form.onsubmit = function (event) {
     //we are also creating a new class and a new span to create a delete button
     document.getElementById("surgeryList").innerHTML += "<li>" + surgeryType + " | " +
         surgeryDate + " | " + surgeryTime + '<span class="delete">delete</span></li>';
+    buttonDelete();
     //since we prevented the default, we have to clear the form each time they submit
     form.reset();
 
@@ -31,7 +32,7 @@ if (localStorage != null && localStorage.length != null) {
     //get the array from the local storage with all the list items
     var text = localStorage.getItem("surgeryStorage");
     console.log(text);
-    if (text != null){
+    if (text != null) {
         //parse the array into JSON objects
         var objects = JSON.parse(text);
         for (var i = 0; i < objects.length; i++) {
@@ -41,9 +42,34 @@ if (localStorage != null && localStorage.length != null) {
             //re-list the items in the Surgery Schedule from the Local Storage
             var listItem = document.getElementById("surgeryList").innerHTML += "<li>" + surgeryType + " | " +
                 surgeryDate + " | " + surgeryTime + '<span class="delete">delete</span></li>';
+                buttonDelete();
             //Send the information from the last local storage to the new session's local storage
             var myObject = { "surgeryType": surgeryType, "surgeryDate": surgeryDate, "surgeryTime": surgeryTime };
             localStorageArray.push(myObject);
         }
-    }  
+    }
 }
+
+
+
+function buttonDelete(){
+    var buttons = document.querySelectorAll(".delete");
+    Array.from(buttons).forEach(function (button) {
+        button.addEventListener("click", function (event) {
+            const li = event.target.parentElement;
+            console.log(li);
+            li.parentNode.removeChild(li);
+        });
+    });
+
+    /*var deleteButton = document.createElement("button");
+deleteButton.innerText = "Delete";
+deleteButton.setAttribute = "delete";
+deleteButton.addEventListener("click", event => {
+    const li = event.target.parentElement;
+    console.log(li);
+    li.parentNode.removeChild(li);
+});
+document.querySelectorAll("#surgeryList li").appendChild(deleteButton);*/
+}
+

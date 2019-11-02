@@ -8,12 +8,12 @@ var canvas = document.getElementById("riskScoreCanvas");
 var circle = canvas.getContext("2d");
 var circle2 = canvas.getContext("2d");
 
-/*//the gray background circle
+//the gray background circle
 circle.beginPath();
 circle.arc(150, 150, 125, 0, 2 * Math.PI);
 circle.lineWidth = "25";
 circle.strokeStyle = "#b1b1b1";
-circle.stroke();*/
+circle.stroke();
 
 form.onsubmit = function (event) {
     //prevent the default function of a submit button
@@ -26,6 +26,7 @@ form.onsubmit = function (event) {
 
         var ratioArc = total / 20;
 
+        //clear the space from the previous input
         circle.clearRect(0, 0, 300, 300);
 
         //the gray background circle
@@ -40,8 +41,6 @@ form.onsubmit = function (event) {
         circle.strokeStyle = "#3CCED1";
         circle.lineWidth = "25";
         circle.stroke();
-
-
     }
     form.reset();
     total = 0;
@@ -50,6 +49,25 @@ form.onsubmit = function (event) {
     }
 };
 
+var x = 0;
+function animate(){
+    requestAnimationFrame(animate);
+    circle2.clearRect(0, 0, 300, 300);
+    circle2.beginPath();
+    circle2.arc(150, 150, 125, 0, x * Math.PI);
+        circle2.arc(150, 150, 125, 0, ratioArc * Math.PI);
+        circle2.strokeStyle = "#3CCED1";
+        circle2.lineWidth = "25";
+        circle2.stroke();
+
+        if(x < ratioArc){
+            x++;
+        }
+        else {
+            return;
+        }
+
+}
 
 /*
 //the progress circle on top of the first circle
