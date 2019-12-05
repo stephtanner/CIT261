@@ -1,9 +1,146 @@
 {
-    "midigation": [
-        "consider postponing the surgery",
-        "talk to your team",
-        "take time outs to make sure you are doing the right surgery on the right person",
-        "invite an additional surgeon to observe",
-        "welcome comments"
+    "surgeries": [
+        {
+            "name": "Brain Tumor",
+            "risks": [
+                "bleeding",
+                "blood clot",
+                "brain swelling",
+                "memory problems",
+                "stroke",
+                "infection",
+                "spinal fluid leak"
+            ],
+            "surgeon factors mitigation": [
+                "consider postponing the surgery",
+                "talk to your team",
+                "take time outs to make sure you are doing the right surgery on the right person",
+                "invite an additional surgeon to observe",
+                "welcome comments"
+            ],
+            "surgeryFactorsMitigation": [
+                "Tech Check : Go over the site of the operation and the procedure name",
+                "Time Out - Anesthesiologist: The anesthesiologist comes and goes over the name of patient, procedure that is being done",
+                "Time Out - Surgeon: The surgeon comes in and talks about the procedure, what position the patient is going to be in, where the patient will go post-op, what imaging he will want, etc.",
+                "Final Huddle: At the end, make sure that everything is accounted for, go over what procedure was done, what (if anything) was sent off, and what needs to be done to the surgery room before the next surgery"
+            ]
+        },
+        {
+            "name": "Shunts",
+            "risks": [
+                "bleeding",
+                "shunt malfunction",
+                "improper drainage",
+                "stroke",
+                "infection",
+                "spinal fluid leak"
+            ],
+            "surgeon factors mitigation": [
+                "consider postponing the surgery",
+                "talk to your team",
+                "take time outs to make sure you are doing the right surgery on the right person",
+                "invite an additional surgeon to observe",
+                "welcome comments"
+            ],
+            "surgeryFactorsMitigation": [
+                "Tech Check : Go over the site of the operation and the procedure name",
+                "Time Out - Anesthesiologist: The anesthesiologist comes and goes over the name of patient, procedure that is being done",
+                "Time Out - Surgeon: The surgeon comes in and talks about the procedure, what position the patient is going to be in, where the patient will go post-op, what imaging he will want, etc.",
+                "Final Huddle: At the end, make sure that everything is accounted for, go over what procedure was done, what (if anything) was sent off, and what needs to be done to the surgery room before the next surgery"
+            ]
+        },
+        {
+            "name": "Chiari Decompression",
+            "risks": [
+                "bleeding",
+                "stroke",
+                "infection",
+                "nerve damage",
+                "spinal fluid leak"
+            ],
+            "surgeon factors mitigation": [
+                "consider postponing the surgery",
+                "talk to your team",
+                "take time outs to make sure you are doing the right surgery on the right person",
+                "invite an additional surgeon to observe",
+                "welcome comments"
+            ],
+            "surgeryFactorsMitigation": [
+                "Tech Check : Go over the site of the operation and the procedure name",
+                "Time Out - Anesthesiologist: The anesthesiologist comes and goes over the name of patient, procedure that is being done",
+                "Time Out - Surgeon: The surgeon comes in and talks about the procedure, what position the patient is going to be in, where the patient will go post-op, what imaging he will want, etc.",
+                "Final Huddle: At the end, make sure that everything is accounted for, go over what procedure was done, what (if anything) was sent off, and what needs to be done to the surgery room before the next surgery"
+            ]
+        },
+        {
+            "name": "Myelomeningocele Closure",
+            "risks": [
+                "bleeding",
+                "increased chance of urinary tract infection",
+                "stroke",
+                "inflammation of the spinal cord",
+                "infection",
+                "spinal fluid leak"
+            ],
+            "surgeon factors mitigation": [
+                "consider postponing the surgery",
+                "talk to your team",
+                "take time outs to make sure you are doing the right surgery on the right person",
+                "invite an additional surgeon to observe",
+                "welcome comments"
+            ],
+            "surgeryFactorsMitigation": [
+                "Tech Check : Go over the site of the operation and the procedure name",
+                "Time Out - Anesthesiologist: The anesthesiologist comes and goes over the name of patient, procedure that is being done",
+                "Time Out - Surgeon: The surgeon comes in and talks about the procedure, what position the patient is going to be in, where the patient will go post-op, what imaging he will want, etc.",
+                "Final Huddle: At the end, make sure that everything is accounted for, go over what procedure was done, what (if anything) was sent off, and what needs to be done to the surgery room before the next surgery"
+            ]
+        },
+        {
+            "name": "Baclofen Pump Placement",
+            "risks": [
+                "meningitis",
+                "headache",
+                "bleeding and bruising",
+                "stroke",
+                "infection",
+                "spinal fluid leak"
+            ],
+            "surgeon factors mitigation": [
+                "consider postponing the surgery",
+                "talk to your team",
+                "take time outs to make sure you are doing the right surgery on the right person",
+                "invite an additional surgeon to observe",
+                "welcome comments"
+            ],
+            "surgeryFactorsMitigation": [
+                "Tech Check : Go over the site of the operation and the procedure name",
+                "Time Out - Anesthesiologist: The anesthesiologist comes and goes over the name of patient, procedure that is being done",
+                "Time Out - Surgeon: The surgeon comes in and talks about the procedure, what position the patient is going to be in, where the patient will go post-op, what imaging he will want, etc.",
+                "Final Huddle: At the end, make sure that everything is accounted for, go over what procedure was done, what (if anything) was sent off, and what needs to be done to the surgery room before the next surgery"
+            ]
+        },
+        {
+            "name": "Craniotomy for Evaluation of Epidural Hematoma",
+            "risks": [
+                "bleeding",
+                "stroke",
+                "infection",
+                "spinal fluid leak"
+            ],
+            "surgeon factors mitigation": [
+                "consider postponing the surgery",
+                "talk to your team",
+                "take time outs to make sure you are doing the right surgery on the right person",
+                "invite an additional surgeon to observe",
+                "welcome comments"
+            ],
+            "surgeryFactorsMitigation": [
+                "Tech Check : Go over the site of the operation and the procedure name",
+                "Time Out - Anesthesiologist: The anesthesiologist comes and goes over the name of patient, procedure that is being done",
+                "Time Out - Surgeon: The surgeon comes in and talks about the procedure, what position the patient is going to be in, where the patient will go post-op, what imaging he will want, etc.",
+                "Final Huddle: At the end, make sure that everything is accounted for, go over what procedure was done, what (if anything) was sent off, and what needs to be done to the surgery room before the next surgery"
+            ]
+        }
     ]
 }

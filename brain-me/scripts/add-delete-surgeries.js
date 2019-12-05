@@ -1,28 +1,35 @@
 var form = document.getElementById("surgeryForm");
 var localStorageArray = [];
+var identification = 0;
+
+//create a new Object Constructor
+function SurgeryInformation(type, date, time, identifier){
+    this.surgeryType = type;
+    this.surgeryDate = date;
+    this.surgeryTime = time;
+    this.surgeryIdentifier = identifier;
+}
 
 form.onsubmit = function (event) {
     //prevent the default function of a submit button
     event.preventDefault();
-    //get the values for the three inputs in the form
-    //and set them to variables to use later
-    var surgeryType = form.surgeryType.value;
-    var surgeryDate = form.surgeryDate.value;
-    var surgeryTime = form.surgeryTime.value;
+    //get the values for the three inputs in the form by creating a New Object with the information
+    surgeryID = new SurgeryInformation(form.surgeryType.value, form.surgeryDate.value, form.surgeryTime.value, identification);
+
     //create a new item that we add to the surgeryList divide
     //we are also creating a new class and a new span to create a delete button
-    document.getElementById("surgeryList").innerHTML += "<li>" + surgeryType + " | " +
-        surgeryDate + " | " + surgeryTime + '<span class="delete">delete</span></li>';
+    document.getElementById("surgeryList").innerHTML += "<li><div style='display:none'>" +identification + "</div>" + surgeryID.surgeryType + " | " +
+    surgeryID.surgeryDate + " | " + surgeryID.surgeryTime + '<span class="delete">delete</span></li>';
+
     buttonDelete();
     //since we prevented the default, we have to clear the form each time they submit
     form.reset();
 
-    var myObject = { "surgeryType": surgeryType, "surgeryDate": surgeryDate, "surgeryTime": surgeryTime };
-    localStorageArray.push(myObject);
+    localStorageArray.push(surgeryID);
     var myJSON = JSON.stringify(localStorageArray);
-    console.log(myJSON);
     localStorage.setItem("surgeryStorage", myJSON);
-    console.log(localStorageArray);
+
+    identification += 1;
 
 };
 
@@ -36,21 +43,18 @@ if (localStorage != null && localStorage.length != null) {
         //parse the array into JSON objects
         var objects = JSON.parse(text);
         for (var i = 0; i < objects.length; i++) {
-            var surgeryType = objects[i].surgeryType;
-            var surgeryDate = objects[i].surgeryDate;
-            var surgeryTime = objects[i].surgeryTime;
+            var surgeryID = new SurgeryInformation(objects[i].surgeryType, objects[i].surgeryDate, objects[i].surgeryTime, objects[i].identification);
+
             //re-list the items in the Surgery Schedule from the Local Storage
-            var listItem = document.getElementById("surgeryList").innerHTML += "<li>" + surgeryType + " | " +
-                surgeryDate + " | " + surgeryTime + '<span class="delete">delete</span></li>';
+            var listItem = document.getElementById("surgeryList").innerHTML += "<li><div style='display:none'>" +identification + "</div>" + objects[i].surgeryType + " | " +
+            objects[i].surgeryDate + " | " + objects[i].surgeryTime + '<span class="delete">delete</span></li>';
                 buttonDelete();
             //Send the information from the last local storage to the new session's local storage
-            var myObject = { "surgeryType": surgeryType, "surgeryDate": surgeryDate, "surgeryTime": surgeryTime };
-            localStorageArray.push(myObject);
+            localStorageArray.push(surgeryID);
+            identification += 1;
         }
     }
 }
-
-
 
 function buttonDelete(){
     var buttons = document.querySelectorAll(".delete");
@@ -59,17 +63,14 @@ function buttonDelete(){
             const li = event.target.parentElement;
             console.log(li);
             li.parentNode.removeChild(li);
+
+            var surgeryArray = JSON.parse(localStorage.getItem("surgeryStorage"));
+            for (var i = 0; i < surgeryArray.length; i++) {
+                if (li.identification == surgeryArray[i].identifier){
+                    surgeryArray.splice(1,1);
+                }
+            }
+            
         });
     });
-
-    /*var deleteButton = document.createElement("button");
-deleteButton.innerText = "Delete";
-deleteButton.setAttribute = "delete";
-deleteButton.addEventListener("click", event => {
-    const li = event.target.parentElement;
-    console.log(li);
-    li.parentNode.removeChild(li);
-});
-document.querySelectorAll("#surgeryList li").appendChild(deleteButton);*/
 }
-

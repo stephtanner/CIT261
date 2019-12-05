@@ -49,26 +49,6 @@ form.onsubmit = function (event) {
     }
 };
 
-var x = 0;
-function animate(){
-    requestAnimationFrame(animate);
-    circle2.clearRect(0, 0, 300, 300);
-    circle2.beginPath();
-    circle2.arc(150, 150, 125, 0, x * Math.PI);
-        circle2.arc(150, 150, 125, 0, ratioArc * Math.PI);
-        circle2.strokeStyle = "#3CCED1";
-        circle2.lineWidth = "25";
-        circle2.stroke();
-
-        if(x < ratioArc){
-            x++;
-        }
-        else {
-            return;
-        }
-
-}
-
 /*
 //the progress circle on top of the first circle
 circle.beginPath();

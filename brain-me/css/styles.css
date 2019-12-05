@@ -240,12 +240,11 @@ fieldset img{
 }
 
 /*front Page with option of login or signup*/
-#appStart #logo{
-    height: 150px;
-    width: auto;
+#indexLogo{
+    width: 75px;
+    height: auto;
     background-color: #F4F3EF;
     border-radius: 50%;
-    margin-top: 5em;
     animation-name: pulse;
     animation-duration: 3s;
     animation-iteration-count: 3;
@@ -307,6 +306,11 @@ li{
 .hide{
     display: none;
 }
+#animatedLogo{
+    display: block;
+    width: 250px;
+    height: 250px;
+}
 /*The index page with the squares to click to the multiple pages*/
 #indexPage{
     display: grid;
@@ -347,4 +351,59 @@ li{
 }
 #indexPage a:visited{
     color: black;
+}
+
+/*analysis page*/
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2em;
+    grid-gap: 1em;
+}
+
+#grid div {
+    background-color: #F4F3EF;
+    padding: 1em;
+}
+
+.codeSection {
+    min-height: 140px;
+}
+
+.sectionName {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+a .comment {
+    display: none;
+}
+
+a:hover .main {
+    display: none;
+}
+
+a:hover .comment {
+    display: inline;
+}
+
+.comment {
+    font-size: .8em;
+}
+.centerVideo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

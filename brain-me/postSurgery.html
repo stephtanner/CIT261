@@ -20,61 +20,61 @@
         </div>
     </nav>
     <main>
-        <h2>Surgery Risk Assessment</h2>
-        <div class="content">
-            <form id="riskAssessmentForm">
-                <fieldset>
-                    <h2>Surgeon Factors</h2>
-                    <div class="slideContainer">
-                        <label>Curency</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
+        <div id="grid">
+            <a href="#">
+                <div class="codeSection">
+                    <div class="sectionName">
+                        <span class="main">Brain Tumor</span>
+                        <span class="comment">Risks<br>bleeding, blood clot, brain swelling, memory problems, stroke, spinal fluid leak</span>
                     </div>
-                    <div class="slideContainer">
-                        <label>Experience Level</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="codeSection">
+                    <div class="sectionName">
+                        <span class="main">Shunts</span>
+                        <span class="comment">Risks<br>bleeding, shunt malfunction, improper drainage, stroke, spinal fluid leak</span>
                     </div>
-                    <div class="slideContainer">
-                        <label>Sleep Aquired</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="codeSection">
+                    <div class="sectionName">
+                        <span class="main">Chiari Decompression</span>
+                        <span class="comment">Risks<br>bleeding, infection, nerve damage, stroke, spinal fluid leak</span>
                     </div>
-                    <div class="slideContainer">
-                        <label>Personal Factors</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="codeSection">
+                    <div class="sectionName">
+                        <span class="main">Myelomeningocele Closure</span>
+                        <span class="comment">Risks<br>bleeding, infection, inflammation of the spinal cord, increased chance of urinary tract infection, stroke, spinal fluid leak</span>
                     </div>
-                </fieldset>
-                <fieldset>
-                    <h2>Operation Factors</h2>
-                    <div class="slideContainer">
-                        <label>Procedure Complexity</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="codeSection">
+                    <div class="sectionName">
+                        <span class="main">Baclofen Pump Placement</span>
+                        <span class="comment">Risks<br>bleeding and bruising, infection, headache, meningitis, stroke, spinal fluid leak</span>
                     </div>
-                    <div class="slideContainer">
-                        <label>Procedure Length</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="codeSection">
+                    <div class="sectionName">
+                        <span class="main">Craniotomy for Evaluation of Epidural Hematoma</span>
+                        <span class="comment">Risks<br>bleeding, infection, stroke, spinal fluid leak</span>
                     </div>
-                    <div class="slideContainer">
-                        <label>Back-to-Back Operations</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
-                    </div>
-                    <div class="slideContainer">
-                        <label>Patient Health Factors</label>
-                        <input type="range" min="0" max="5" value="0" class="slider">
-                        <div class="output"></div>
-                    </div>
-                </fieldset>
-
-                <button type="submit" id="riskButton">Compute Risk</button>
-
-            </form>
+                </div>
+            </a>
         </div>
-
+        <h2>Mitigation Ideas</h2>
+        <div id="mitigation"></div>
+        <video width ="320" height="auto" controls class="centerVideo">
+            <source src="../brain-me/extras/Sid-talking.mp4" type="video/mp4">
+        </video>
     </main>
     <footer>
             <div class="navbar">
@@ -95,6 +95,6 @@
                         <p>Analysis</p>
                     </a>
                 </div>
-        <script type="text/javascript" src="scripts/slider.js"></script>
+        <script type="text/javascript" src="scripts/ajaxTasks.js"></script>
     </footer>
 </body></html>
