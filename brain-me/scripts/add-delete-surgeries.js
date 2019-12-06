@@ -64,9 +64,12 @@ function buttonDelete(){
             console.log(li);
             li.parentNode.removeChild(li);
 
+            //I don't know how to get this to work. Delete from local storage using the ID
             var surgeryArray = JSON.parse(localStorage.getItem("surgeryStorage"));
+            var identificationDiv = event.target.div;
+            console.log(identificationDiv);
             for (var i = 0; i < surgeryArray.length; i++) {
-                if (li.identification == surgeryArray[i].identifier){
+                if (identificationDiv == surgeryArray[i].identifier){
                     surgeryArray.splice(1,1);
                 }
             }
